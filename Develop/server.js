@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+
+// Helper method for generating unique ids
+const uuid = require('./helpers/uuid');
+
 const PORT = 3001;
 
 const app = express();
@@ -44,7 +48,8 @@ app.post('/api/notes', (req, res) => {
     // Variable for the object we will save
     const newNote = {
       title,
-      text
+      text,
+      note_id: uuid()
     };
 
     // Obtain existing notes
@@ -81,6 +86,16 @@ app.post('/api/notes', (req, res) => {
     res.status(500).json('Error in saving note');
   }
 });
+
+// DELET request to save a note
+app.delete('/api/notes/:id', (req, res) => {
+  // Log that a DELETE request was received
+  console.info(`${req.method} request received to DELETE a note`);
+
+  res.send('DELETE request to notes')
+
+});
+
 
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
