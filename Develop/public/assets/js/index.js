@@ -1,7 +1,14 @@
+//TODO:
+        //remove all highlighted notes.
+        //remove all dead code. 
+        //FIXME: SAVE BUTTON: show function working well. Currently not showing when user has entered a note. 
+        //FIXME: DISPLAY SAVED NOTES: currently cannot see saved notes at all. 
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
+let delBtn;
 let noteList;
 
 if (window.location.pathname === '/notes') {
@@ -9,6 +16,7 @@ if (window.location.pathname === '/notes') {
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
+  delBtn = document.querySelector('.delete-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
@@ -179,8 +187,9 @@ const getAndRenderNotes = () => getNotes().then(renderNoteList);
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave); //WORKING!
   newNoteBtn.addEventListener('click', handleNewNoteView); //WORKING!
-  noteTitle.addEventListener('keyup', handleRenderSaveBtn); //FIXME: see notes at handleRenderSaveBtn 
-  noteText.addEventListener('keyup', handleRenderSaveBtn); //FIXME: see notes at handleRenderSaveBtn 
+  // delBtn.addEventListener('click', handleNoteDelete); FIXME: work on delete button. This eventhandler may not be needed. 
+  noteTitle.addEventListener('keyup', handleRenderSaveBtn); //WORKING!
+  noteText.addEventListener('keyup', handleRenderSaveBtn); //WORKING!
 }
 
 getAndRenderNotes();
