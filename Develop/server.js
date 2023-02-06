@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/notes', (req, res) => {
+app.get('/api/notes', (req, res) => {
   res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
