@@ -108,14 +108,17 @@ const handleNewNoteView = (e) => {
   renderActiveNote();
 };
 
+//FIXME: show function working well. Currently not showing when user has entered a note. 
+//do we need to have the hide at all? it is called with keyup event. 
 const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
-    hide(saveNoteBtn);
-  } else {
+  // if (!noteTitle.value.trim() || !noteText.value.trim()) {
+  //   hide(saveNoteBtn);
+  // } else {
     show(saveNoteBtn);
-  }
+  // }
 };
 
+//FIXME: currently cannot see saved notes at all. 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
@@ -174,10 +177,10 @@ const renderNoteList = async (notes) => {
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
-  saveNoteBtn.addEventListener('click', handleNoteSave);
-  newNoteBtn.addEventListener('click', handleNewNoteView);
-  noteTitle.addEventListener('keyup', handleRenderSaveBtn);
-  noteText.addEventListener('keyup', handleRenderSaveBtn);
+  saveNoteBtn.addEventListener('click', handleNoteSave); //WORKING!
+  newNoteBtn.addEventListener('click', handleNewNoteView); //WORKING!
+  noteTitle.addEventListener('keyup', handleRenderSaveBtn); //FIXME: see notes at handleRenderSaveBtn 
+  noteText.addEventListener('keyup', handleRenderSaveBtn); //FIXME: see notes at handleRenderSaveBtn 
 }
 
 getAndRenderNotes();
