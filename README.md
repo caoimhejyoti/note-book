@@ -56,6 +56,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 
 ## Resources
+https://expressjs.com/en/5x/api.html#app.delete.method
+https://nodejs.org/api/fs.html#fspromiseswritefilefile-data-options
 
 
 ## License
