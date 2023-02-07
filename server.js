@@ -4,7 +4,7 @@ const fs = require('fs');
 const api = require('./routes/index');
 
 // Helper method for generating unique ids
-const uuid = require('../helpers/uuid');
+const uuid = require('./helpers/uuid');
 
 const PORT = process.env.PORT || 3001;
 
