@@ -1,11 +1,11 @@
 const notes = require('express').Router();
-const uuid = require('./../helpers/uuid');
+const uuid = require('../../helpers/uuid');
 const fs = require('fs');
 const {
     readFromFile,
     readAndAppend,
     writeToFile,
-} = require('../helpers/fsUtils');
+} = require('../../helpers/fsUtils');
 
 //COMPLETE!
 // GET Route for retrieving all the notes
