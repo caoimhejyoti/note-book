@@ -1,5 +1,6 @@
 const notes = require('express').Router();
 const uuid = require('./../helpers/uuid');
+const fs = require('fs');
 const {
     readFromFile,
     readAndAppend,
@@ -42,9 +43,14 @@ notes.delete('/:note_id', (req, res) => {
         });
 });
 
+
 // POST Route for a new note
 notes.post('/', (req, res) => {
     console.log(req.body);
+    // Log that a POST request was received
+    console.info(`${req.method} request received to add a note`);
+
+    // Destructuring assignment for the items in req.body
     const { title, text } = req.body;
     if (req.body) {
         const newNote = {
@@ -53,10 +59,44 @@ notes.post('/', (req, res) => {
         note_id: uuid(),
         };
 
-        readAndAppend(newNote, './db/db.json');
-        res.json(`Note added successfully 🚀`);
+    //     readAndAppend(newNote, './db/db.json');
+    //     res.json(`Note added successfully 🚀`);
+    // } else {
+    //     res.error('Error in adding note');
+    // }
+
+    // Obtain existing notes
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) {
+          console.error(err);
+        } else {
+          // Convert string into JSON object
+          const parsedNotes = JSON.parse(data);
+  
+          // Add new note
+          parsedNotes.push(newNote);
+  
+          // Write updated notes back to the file
+          fs.writeFile(
+            './db/db.json',
+            JSON.stringify(parsedNotes, null, 4),
+            (writeErr) =>
+              writeErr
+                ? console.error(writeErr)
+                : console.info('Successfully saved note!')
+          );
+        }
+      });
+  
+      const response = {
+        status: 'success',
+        body: newNote,
+      };
+  
+      console.log(response);
+      res.status(201).json(response);
     } else {
-        res.error('Error in adding note');
+      res.status(500).json('Error in saving note');
     }
 });
 
