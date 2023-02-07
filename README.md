@@ -2,7 +2,7 @@
 Application for taking down and saving notes.
 
 
-![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)   ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)  
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)   ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)   ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 <!-- FIXME: add appropriate badges. -->
 
 [![MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -41,10 +41,10 @@ COMPLETE! WHEN I enter a new note title and the note’s text
 COMPLETE! THEN a Save icon appears in the navigation at the top of the page
 COMPLETE! WHEN I click on the Save icon
 COMPLETE! THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WORKING! [confirm working when showing saved file] WHEN I click on the Write icon in the navigation at the top of the page
-WORKING! [confirm working when showing saved file] THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
+COMPLETE! WHEN I click on an existing note in the list in the left-hand column
+COMPLETE! THEN that note appears in the right-hand column
+COMPLETE! WHEN I click on the Write icon in the navigation at the top of the page
+COMPLETE! THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
 
 ## Installation
@@ -58,7 +58,10 @@ WORKING! [confirm working when showing saved file] THEN I am presented with empt
 
 ## Resources
 https://expressjs.com/en/5x/api.html#app.delete.method
+
 https://nodejs.org/api/fs.html#fspromiseswritefilefile-data-options
+
+https://github.com/Ileriayo/markdown-badges
 
 
 ## License
