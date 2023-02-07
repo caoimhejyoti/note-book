@@ -116,13 +116,16 @@ const handleNewNoteView = (e) => {
   renderActiveNote();
 };
 
+
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
     hide(saveNoteBtn);
   } else {
     show(saveNoteBtn);
   }
+  show(saveNoteBtn);
 };
+
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
@@ -184,7 +187,6 @@ const getAndRenderNotes = () => getNotes().then(renderNoteList);
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave); //WORKING!
   newNoteBtn.addEventListener('click', handleNewNoteView); //WORKING!
-  delBtn.addEventListener('click', handleNoteDelete); //FIXME: work on delete button. This eventhandler may not be needed. 
   noteTitle.addEventListener('keyup', handleRenderSaveBtn); //WORKING!
   noteText.addEventListener('keyup', handleRenderSaveBtn); //WORKING!
 }
