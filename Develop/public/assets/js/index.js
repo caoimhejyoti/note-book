@@ -1,8 +1,7 @@
 //TODO:
         //remove all highlighted notes.
-        //remove all dead code. 
-        //FIXME: SAVE BUTTON: show function working well. Currently not showing when user has entered a note. 
-        //FIXME: DISPLAY SAVED NOTES: currently cannot see saved notes at all. 
+
+
 
 let noteTitle;
 let noteText;
