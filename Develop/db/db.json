@@ -1,27 +1,12 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text",
-        "note_id": "1"
+        "title": "Test Note Title",
+        "text": "Test note text",
+        "note_id": "d2cc"
     },
     {
-        "title": "hello",
-        "text": "world",
-        "note_id": "3"
-    },
-    {
-        "title": "meow",
-        "text": "",
-        "note_id": "f27c"
-    },
-    {
-        "title": "caw",
-        "text": "",
-        "note_id": "5403"
-    },
-    {
-        "title": "I need to show",
-        "text": "this file",
-        "note_id": "4304"
+        "title": "Second Test Note",
+        "text": "Second test note text",
+        "note_id": "4c85"
     }
 ]
