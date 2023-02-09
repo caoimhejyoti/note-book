@@ -119,7 +119,7 @@ const handleRenderSaveBtn = () => {
   } else {
     show(saveNoteBtn);
   }
-  show(saveNoteBtn);
+  // show(saveNoteBtn);
 };
 
 // Render the list of note titles
