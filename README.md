@@ -1,4 +1,4 @@
-# note-book
+# Note Book
 Application for taking down and saving notes.
 
 
@@ -54,9 +54,6 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Usage
 https://note-book.herokuapp.com/
 
-## Future Developments
-
-
 ## Resources
 https://expressjs.com/en/5x/api.html#app.delete.method
 
@@ -65,8 +62,6 @@ https://nodejs.org/api/fs.html#fspromiseswritefilefile-data-options
 https://github.com/Ileriayo/markdown-badges
 
 https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide
-
-
 
 ## License
 This project is using the following license:
