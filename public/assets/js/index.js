@@ -60,13 +60,13 @@ const renderActiveNote = () => {
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
-    console.log("inside if renderActiveNote"); //used for debugging
+    // console.log("inside if renderActiveNote"); //used for debugging
   } else {
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
     noteTitle.value = '';
     noteText.value = '';
-    console.log("inside else renderActiveNote"); //used for debugging
+    // console.log("inside else renderActiveNote"); //used for debugging
   }
 };
 
