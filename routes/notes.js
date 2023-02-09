@@ -10,7 +10,21 @@ const {
 notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
-  
+
+// GET Route for a specific note based on ID
+notes.get('/:id', (req, res) => {
+  const noteId = req.params.id;
+  readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+      const result = json.filter((note) => note.id === noteId);
+      return result.length > 0
+          ? res.json(result)
+          : res.json('No note with that ID');
+      });
+});
+
+
 // DELETE Route for a specific note
 notes.delete('/:note_id', (req, res) => {
     const noteId = req.params.note_id;
