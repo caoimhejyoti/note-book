@@ -54,6 +54,33 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Usage
 https://note-book.herokuapp.com/
 
+When you follow the link you the home page will look like this:
+
+![Screen grab of notebook landing page.](./public/assets/img/index-note-screenshot.png)
+
+Once you select "Get Started" you will then be taken to the notes page. Here you can see saved notes on the left hand side and a blank note reading for making on the right hand side. 
+
+![Screen grab of blank note for user to input information into.](./public/assets/img/blank-note-screenshot.png)
+
+You are then able to type in your own note and can then select the save button on the right hand side of the nav bar.
+
+![Screen grab of new note - unsaved.](./public/assets/img/typing-note-screenshot.png)
+
+Once saved, your note will then appear on the left side of the site. 
+
+![Screen grab of saved note.](./public/assets/img/saved-note-screenshot.png)
+
+Users are able to select saved notes and they will appear on the right hand side, for in depth reading. 
+
+![Screen grab of saved note being displayed.](./public/assets/img/display-note-screenshot.png)
+
+If you wish to add a new note, please select the + on the right hand side of the nav bar. 
+
+Selecting "Note Taker" on the left hand side of the nav bar will take users to the landing page.
+
+Users are able to delete notes by pressing the red bin icon on the chosen note. 
+
+
 ## Resources
 https://expressjs.com/en/5x/api.html#app.delete.method
 
