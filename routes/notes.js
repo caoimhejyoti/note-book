@@ -3,7 +3,6 @@ const uuid = require('./../helpers/uuid');
 const fs = require('fs');
 const {
     readFromFile,
-    readAndAppend,
     writeToFile,
 } = require('./../helpers/fsUtils');
 
@@ -12,20 +11,6 @@ const {
 notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
-
-
-// // GET Route for a specific note
-// notes.get('/:note_id', (req, res) => {
-// const noteId = req.params.note_id;
-// readFromFile('./db/db.json')
-//     .then((data) => JSON.parse(data))
-//     .then((json) => {
-//     const result = json.filter((note) => note.note_id === noteId);
-//     return result.length > 0
-//         ? res.json(result)
-//         : res.json('No note with that ID');
-//     });
-// });
   
 //COMPLETE!
 // DELETE Route for a specific note
